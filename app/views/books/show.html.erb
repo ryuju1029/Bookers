@@ -1,6 +1,13 @@
 <!DOCTYPE html>
 <html>
- <body>
+ <body class="body">
+    <% if flash[:notice] %>
+     <div class="flash">
+       <%= flash[:notice] %>
+     </div>
+    
+    <% end %>
+    
     <table>
       <tbody>
           <tr><td><h5>Title:</h5></td><td><%= @book.title %></td></tr>
