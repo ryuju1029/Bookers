@@ -35,6 +35,14 @@
    </table>
 
      <div class="Title">
+       
+       <% if @book.errors.any? %>
+        <%= @book.errors.count %>error
+        <% @book.errors.full_messages.each do |message| %>
+         <%= message %>
+         <% end %>
+        <% end %>
+        
      <h2>New book</h2>
      </div>
      
